@@ -1,8 +1,6 @@
 package io.zipcoder.microlabs.arrays;
 
 
-import java.lang.reflect.Array;
-
 public class ArrayParty {
 
 
@@ -24,7 +22,11 @@ public class ArrayParty {
     }
 
     public String lastElement(String[] inputArray){
-        return "";
+        String lastElement = "";
+
+        lastElement = inputArray[inputArray.length-1];
+
+        return "*** Output ***" + "\n" + lastElement;
     }
 
     //TODO Define the method lastButOne
