@@ -39,14 +39,37 @@ public class ArrayPartyTest {
 
         //: Then
 
-        Assert.assertEquals("This should return the last element of the the array", expected, actual);
+        Assert.assertEquals("This should return the last element of the the array Mushrooms", expected, actual);
     }
 
-    //TODO Define the method lastButOneTest
 
-    //TODO Define the method reverseTest
+    @ Test
+    public void lastButOneTest(){
+        String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "*** Output ***\nTomatoes";
+
+        String actual = arrayParty.lastButOne(breakfast);
+
+        Assert.assertEquals("This should return the second to last element Tomatoes", expected ,actual);
+    }
+
+    @Test
+    public void reverseTest(){
+        String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+        String [] expected = {"*** Output ***","Mushrooms","Tomatoes","Bacon","Beans","Eggs","Sausage"};
+
+        String[] actual = arrayParty.reverse(breakfast);
+
+        Assert.assertArrayEquals("This should return the reverse of the Array", expected, actual);
+    }
 
     //TODO Define the method isPalindromeTest
+    @Test
+    public void isPalindromeTest(){
+        
+    }
 
     //TODO Define the method compressTest
 
