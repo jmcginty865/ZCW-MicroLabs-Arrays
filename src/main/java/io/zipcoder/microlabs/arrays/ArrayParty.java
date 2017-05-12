@@ -2,6 +2,9 @@ package io.zipcoder.microlabs.arrays;
 
 
 import java.lang.reflect.Array;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ArrayParty {
 
@@ -10,18 +13,13 @@ public class ArrayParty {
         String arrayIndexValue = "";
 
         for(int i = 0; i < inputArray.length; i++ ){
-            if(i > inputArray.length -1) {
-                arrayIndexValue += inputArray[i];
-            }
-            else if(i != inputArray.length){
+            if(i != inputArray.length){
                 arrayIndexValue += inputArray[i] + "\n";
             }
          }
-
-
-       // System.out.print(arrayIndexValue);
         return "*** Output ***\n" + arrayIndexValue.trim();
     }
+
 
     public String lastElement(String[] inputArray){
         String lastElement = "";
@@ -55,9 +53,34 @@ public class ArrayParty {
         return secondArray;
     }
 
-    //TODO Define the method isPalindrome
+
+    public boolean isPalindrome(String [] inputArray){
+
+        for(int i = inputArray.length - 1, j = 0; i>= inputArray.length/2 ; i --, j++ ){
+            if(inputArray[i] != inputArray[j]){
+
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
     //TODO Define the method compress
+//    public String compress(int [] inputArray) {
+//        String compressedNumbers = "";
+//        int compareArray = 0;
+//
+//
+//        for(int i = 0 , j = 0; i < inputArray.length; i++, j++){
+//            if(inputArray[j] != inputArray[i]){
+//                compareArray += inputArray[i];
+//            }
+//        }
+//        return "*** OutPut ***\n" + ":" + compressedNumbers.trim();
+//    }
+
 
     //TODO Define the method pack
 
