@@ -1,15 +1,16 @@
 package io.zipcoder.microlabs.arrays;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class ArrayPartyTest {
+    @Before
+    ArrayParty arrayParty = new ArrayParty();
 
     @Test
     public void printArrayTest(){
-        //: Given
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        ArrayParty arrayParty = new ArrayParty();
         String expected = "*** Output ***\n" +
                 "Sausage\n" +
                 "Eggs\n" +
@@ -18,26 +19,17 @@ public class ArrayPartyTest {
                 "Tomatoes\n" +
                 "Mushrooms";
 
-        //: When
         String actual = arrayParty.printArray(breakfast);
 
-        //: Then
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
 
     @Test
     public void lastElementTest(){
-        //: Given
-
-            String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-            ArrayParty arrayParty =  new ArrayParty();
-            String expected = "*** Output ***\nMushrooms";
-
-        //: When
+        String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        String expected = "*** Output ***\nMushrooms";
 
         String actual = arrayParty.lastElement((breakfast));
-
-        //: Then
 
         Assert.assertEquals("This should return the last element of the the array Mushrooms", expected, actual);
     }
@@ -46,7 +38,6 @@ public class ArrayPartyTest {
     @ Test
     public void lastButOneTest(){
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        ArrayParty arrayParty = new ArrayParty();
         String expected = "*** Output ***\nTomatoes";
 
         String actual = arrayParty.lastButOne(breakfast);
@@ -57,7 +48,6 @@ public class ArrayPartyTest {
     @Test
     public void reverseTest(){
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        ArrayParty arrayParty = new ArrayParty();
         String [] expected = {"*** Output ***","Mushrooms","Tomatoes","Bacon","Beans","Eggs","Sausage"};
 
         String[] actual = arrayParty.reverse(breakfast);
@@ -65,10 +55,9 @@ public class ArrayPartyTest {
         Assert.assertArrayEquals("This should return the reverse of the Array", expected, actual);
     }
 
-    //TODO Define the method isPalindromeTest
+
     @Test
     public void isPalindromeTrueTest(){
-        ArrayParty arrayParty = new ArrayParty();
         String [] palindromic = {"Sausage", "Eggs", "Beans",
                 "Beans", "Eggs", "Sausage"};
 
@@ -83,7 +72,7 @@ public class ArrayPartyTest {
     public void isPalindromeFlaseTest(){
         String [] breakfast = {"Sausage", "Eggs", "Beans",
                 "Bacon", "Tomatoes", "Mushrooms"};
-        ArrayParty arrayParty = new ArrayParty();
+
 
         boolean expected = false;
 
@@ -95,7 +84,6 @@ public class ArrayPartyTest {
 
     @Test
     public void compressTest(){
-        ArrayParty arrayParty = new ArrayParty();
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
 
         String expected = "*** Output ***\n:1\n:3\n:2\n:1\n:4";
@@ -104,7 +92,16 @@ public class ArrayPartyTest {
         Assert.assertEquals("This should print out :1:3:2:1:4", expected, actual);
     }
 
-    //TODO Define the method packTest
+    
+    @Test
+    public void packTest(){
+        char [] letters = {'a','a','a','a','b','c','c','a','a','d','e','e','e','e'};
+
+        String expected = "*** Output ***\naaaa,b,cc,aa,d,eeee";
+        String actual = arrayParty.pack(letters);
+
+        Assert.assertEquals("This should return *** Output *** \n aaaa, b, cc, aa, d, eeee", expected, actual);
+    }
 
 
 }
