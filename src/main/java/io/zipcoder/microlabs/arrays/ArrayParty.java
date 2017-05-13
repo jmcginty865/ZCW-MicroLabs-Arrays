@@ -39,7 +39,7 @@ public class ArrayParty {
         return "*** Output ***" + "\n" + secondToLastElement;
     }
 
-    //TODO Define the method reverse
+    
     public String[] reverse(String[] inputArray) {
         String reverseArray = "";
         String[] secondArray = new String[inputArray.length + 1];

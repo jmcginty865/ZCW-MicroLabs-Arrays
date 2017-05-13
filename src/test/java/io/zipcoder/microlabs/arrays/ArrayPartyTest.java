@@ -92,7 +92,7 @@ public class ArrayPartyTest {
         Assert.assertEquals("This should return false", expected,actual);
     }
 
-    //TODO Define the method compressTest
+
     @Test
     public void compressTest(){
         ArrayParty arrayParty = new ArrayParty();
