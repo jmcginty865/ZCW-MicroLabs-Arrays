@@ -81,11 +81,14 @@ public class ArrayParty {
 
         return output ;
     }
+
+
+
+
+    public String pack(){
+        return "";
+    }
 }
-
-
-
-    //TODO Define the method pack
 
 
 

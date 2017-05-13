@@ -5,11 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ArrayPartyTest {
-    @Before
-    ArrayParty arrayParty = new ArrayParty();
 
     @Test
     public void printArrayTest(){
+        ArrayParty arrayParty = new ArrayParty();
+
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         String expected = "*** Output ***\n" +
                 "Sausage\n" +
@@ -26,6 +26,8 @@ public class ArrayPartyTest {
 
     @Test
     public void lastElementTest(){
+        ArrayParty arrayParty = new ArrayParty();
+
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         String expected = "*** Output ***\nMushrooms";
 
@@ -37,6 +39,7 @@ public class ArrayPartyTest {
 
     @ Test
     public void lastButOneTest(){
+        ArrayParty arrayParty = new ArrayParty();
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         String expected = "*** Output ***\nTomatoes";
 
@@ -47,6 +50,7 @@ public class ArrayPartyTest {
 
     @Test
     public void reverseTest(){
+        ArrayParty arrayParty = new ArrayParty();
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         String [] expected = {"*** Output ***","Mushrooms","Tomatoes","Bacon","Beans","Eggs","Sausage"};
 
@@ -58,6 +62,8 @@ public class ArrayPartyTest {
 
     @Test
     public void isPalindromeTrueTest(){
+        ArrayParty arrayParty = new ArrayParty();
+
         String [] palindromic = {"Sausage", "Eggs", "Beans",
                 "Beans", "Eggs", "Sausage"};
 
@@ -70,6 +76,8 @@ public class ArrayPartyTest {
 
     @Test
     public void isPalindromeFlaseTest(){
+        ArrayParty arrayParty = new ArrayParty();
+
         String [] breakfast = {"Sausage", "Eggs", "Beans",
                 "Bacon", "Tomatoes", "Mushrooms"};
 
@@ -84,6 +92,8 @@ public class ArrayPartyTest {
 
     @Test
     public void compressTest(){
+        ArrayParty arrayParty = new ArrayParty();
+
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
 
         String expected = "*** Output ***\n:1\n:3\n:2\n:1\n:4";
@@ -92,9 +102,11 @@ public class ArrayPartyTest {
         Assert.assertEquals("This should print out :1:3:2:1:4", expected, actual);
     }
 
-    
+
     @Test
     public void packTest(){
+        ArrayParty arrayParty = new ArrayParty();
+        
         char [] letters = {'a','a','a','a','b','c','c','a','a','d','e','e','e','e'};
 
         String expected = "*** Output ***\naaaa,b,cc,aa,d,eeee";
