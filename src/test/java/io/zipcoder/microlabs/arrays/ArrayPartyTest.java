@@ -98,10 +98,10 @@ public class ArrayPartyTest {
         ArrayParty arrayParty = new ArrayParty();
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
 
-        String expected = "*** Output ***\n:1\n:3\n:2\n:4";
+        String expected = "*** Output ***\n:1\n:3\n:2\n:1\n:4";
         String actual = arrayParty.compress(nums);
 
-        Assert.assertEquals("This should print out :1:3:2:4", expected, actual);
+        Assert.assertEquals("This should print out :1:3:2:1:4", expected, actual);
     }
 
     //TODO Define the method packTest
