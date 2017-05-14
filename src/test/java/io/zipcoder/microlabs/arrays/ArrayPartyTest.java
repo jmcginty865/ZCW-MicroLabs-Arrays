@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class ArrayPartyTest {
 
+
     @Test
     public void printArrayTest(){
         ArrayParty arrayParty = new ArrayParty();
@@ -52,11 +53,11 @@ public class ArrayPartyTest {
     public void reverseTest(){
         ArrayParty arrayParty = new ArrayParty();
         String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        String [] expected = {"*** Output ***","Mushrooms","Tomatoes","Bacon","Beans","Eggs","Sausage"};
+        String  expected = "*** Output *** Mushrooms Tomatoes Bacon Beans Eggs Sausage";
 
-        String[] actual = arrayParty.reverse(breakfast);
+        String actual = arrayParty.reverse(breakfast);
 
-        Assert.assertArrayEquals("This should return the reverse of the Array", expected, actual);
+        Assert.assertEquals("This should return the reverse of the Array", expected, actual);
     }
 
 
@@ -75,7 +76,7 @@ public class ArrayPartyTest {
     }
 
     @Test
-    public void isPalindromeFlaseTest(){
+    public void isPalindromeFalseTest(){
         ArrayParty arrayParty = new ArrayParty();
 
         String [] breakfast = {"Sausage", "Eggs", "Beans",
@@ -106,7 +107,7 @@ public class ArrayPartyTest {
     @Test
     public void packTest(){
         ArrayParty arrayParty = new ArrayParty();
-        
+
         char [] letters = {'a','a','a','a','b','c','c','a','a','d','e','e','e','e'};
 
         String expected = "*** Output ***\naaaa,b,cc,aa,d,eeee";
